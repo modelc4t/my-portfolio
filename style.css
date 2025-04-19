@@ -334,15 +334,3 @@ footer {
   box-shadow: 0 0 15px rgba(142, 68, 173, 0.8); /* Purple glow effect on hover */
   transform: scale(1.05);  /* Slight zoom effect */
 }
- 
-.video-block {
-  padding: 15px;  /* Adds padding inside the video box */
-  border-radius: 10px;  /* Rounded corners */
-  transition: all 0.3s ease-in-out;  /* Smooth transition for hover/focus effect */
-  box-sizing: border-box;  /* Ensure padding doesn't affect the element's overall size */
-}
-
-.video-block:hover, .video-block:focus {
-  box-shadow: 0 0 15px rgba(142, 68, 173, 0.8);  /* Purple glow effect */
-  transform: scale(1.05);  /* Slight zoom effect */
-}
