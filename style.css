@@ -244,7 +244,7 @@ body {
 }
 
 footer {
-  background-color: #000000;
+  background-color: #00000000;
   color: #fff;
   padding: 20px 0;
   margin-top: 40px;
@@ -333,4 +333,66 @@ footer {
 .video-block:hover {
   box-shadow: 0 0 15px rgba(142, 68, 173, 0.8); /* Purple glow effect on hover */
   transform: scale(1.05);  /* Slight zoom effect */
+}
+
+.youtube-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0);
+}
+
+.youtube-video {
+  flex: 1 1 30%;
+  max-width: 350px;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.youtube-video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.8);
+}
+
+.youtube-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+.video-caption {
+  color: white;
+  font-size: 1rem;
+  text-align: center; /* Keep text centered */
+  margin-top: 10px;
+  padding-left: x; /* This moves the caption slightly to the right */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .youtube-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .youtube-video {
+    max-width: 90%;
+  }
+}
+
+.youtube-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.youtube-caption {
+  text-align: center;
+  margin-top: 0.5rem;
 }
