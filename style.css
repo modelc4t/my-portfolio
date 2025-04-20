@@ -396,3 +396,23 @@ footer {
   text-align: center;
   margin-top: 0.5rem;
 }
+
+body {
+  min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+  margin: 0;
+}
+
+footer {
+  background-color: #22222200;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  position: relative; /* Stays at the bottom only when content pushes it */
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+}
