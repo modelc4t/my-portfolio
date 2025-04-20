@@ -6,6 +6,7 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   
 
@@ -20,7 +21,7 @@
   <section id="work" class="video-grid">
     <!-- Video Block 1 -->
     <div class="video-block">
-      <video src="POLICECHASE.mp4" controls poster="POLICECHASE.jpeg" onclick="this.play(); this.controls = true;"></video>
+      <video src="POLICECHASE.mp4" poster="POLICECHASE.jpeg" onclick="playWithControls(this);"></video>
       <p class="video-caption">GTA-style animation created in Blender for a clothing brand, 
         with t-shirt design created in Illustrator and graphics for the van and police car created in Photoshop.
 
@@ -29,7 +30,7 @@
   
     <!-- Video Block 2 -->
     <div class="video-block">
-      <video src="skater.mp4" controls poster="SkatePic.jpeg"></video>
+      <video src="skater.mp4" poster="SkatePic.jpeg" onclick="playWithControls(this);"></video>
       <p class="video-caption">Animated a skateboarding character Blender 
         using flat colors and no lighting to create a 2D look. 
         This stylized clip was featured in a client’s music video.</p>
@@ -37,7 +38,7 @@
   
     <!-- Video Block 3 -->
     <div class="video-block">
-      <video src="advert.mp4" controls poster="AdPic.jpg"></video>
+      <video src="advert.mp4" poster="AdPic.jpg" onclick="playWithControls(this);"></video>
       <p class="video-caption">Blender animation promoting 3D art to Shopify users, 
         featuring Illustrator-based artwork, a stylized skateboarder, 
         Shopify sales pop-ups, shootout scene, and 3D text.</p>
@@ -46,7 +47,7 @@
   
     <!-- Video Block 4 -->
     <div class="video-block">
-      <video src="smoking.mp4" controls poster="SmokePic.jpeg"></video>
+      <video src="smoking.mp4" poster="SmokePic.jpeg" onclick="playWithControls(this);"></video>
       <p class="video-caption">Blender project stylised to give it a 2D look.
         The face was made using Photoshop tools and animated using the timeline before
         importing into Blender.
@@ -56,7 +57,7 @@
   
     <!-- Video Block 5 -->
     <div class="video-block">
-      <video src="FirstProject.mp4" controls poster="FirstProject.jpeg"></video>
+      <video src="FirstProject.mp4" poster="FirstProject.jpeg" onclick="playWithControls(this);"></video>
       <p class="video-caption">GTA-style mock up trailer
         featuring a mini town, side missions, parody logos, illustrations, and real world
         graffiti pieces which I photographed and uploaded to Blender.
@@ -65,7 +66,7 @@
   
     <!-- Video Block 6 -->
     <div class="video-block">
-      <video src="copy_D2B2A3C3-190F-4A1A-8626-0A2FB20C757F.mp4" controls poster="CartPic.jpeg"></video>
+      <video src="copy_D2B2A3C3-190F-4A1A-8626-0A2FB20C757F.mp4" poster="CartPic.jpeg" onclick="playWithControls(this);"></video>
       <p class="video-caption">Music equalizer 3D environment created using Blender and synced
         to a Trap instrumental produced, mixed, and mastered inside FL Studio.
       </p>
@@ -73,7 +74,7 @@
   
     <!-- Video Block 7 -->
     <div class="video-block">
-      <video src="DonPenAnimation.mp4" controls poster="DonPenPic.jpeg"></video>
+      <video src="DonPenAnimation.mp4" poster="DonPenPic.jpeg" onclick="playWithControls(this);"></video>
       <p class="video-caption">2D/3D Donpen animation created using Photopea and Blender.
         Inspired by my trip to Osaka, Namba
       </p>
@@ -81,15 +82,35 @@
   
     <!-- Video Block 8 -->
     <div class="video-block">
-      <video src="SquidGame.mp4" controls poster="SquidPic.jpeg"></video>
+      <video src="SquidGame.mp4" poster="SquidPic.jpeg" onclick="playWithControls(this);"></video>
       <p class="video-caption">Squid Game mask modelled using Blender and later attached to a stylized Maximo
         character to create a 2D cartoon style scene from the popular series. 
 
       </p>
     </div>
+    <script>
+      function playWithControls(video) {
+        // If the video is paused, play it and enable controls
+        if (video.paused) {
+          video.play();
+          video.controls = true;  // Enable controls once video starts playing
+        } else {
+          video.pause();  // Pause if video is already playing
+        }
+      }
+    
+      // Ensure mute doesn't pause the video (native functionality).
+      const videos = document.querySelectorAll('video');
+      videos.forEach(video => {
+        video.addEventListener('volumechange', function() {
+          if (this.muted) {
+            this.play();  // Ensure video continues if muted/unmuted
+          }
+        });
+      });
+    </script>
 
     
-
     
 
     
