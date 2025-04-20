@@ -103,17 +103,23 @@
       <form action="https://formsubmit.co/modelc4t@gmail.com" method="POST">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
-
+  
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
-
+  
         <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
-
+  
+        <!-- Fixes for FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://modelc4t.github.io/thanks.html">
+  
         <button type="submit">Send Message</button>
       </form>
     </div>
-
+  
+    <!-- Social Media Section -->
     <div class="social-media">
       <a href="https://www.tiktok.com/@modelc4t" target="_blank">
         <img src="social-media.png" alt="TikTok">
