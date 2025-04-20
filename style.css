@@ -23,7 +23,7 @@ body {
 .video-block video {
   width: 100%;
   height: 80%;
-  aspect-ratio: 10 / 12; /* For TikTok-like video aspect ratio */
+  aspect-ratio: 10 / 12; /* For TikTok video aspect ratio */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -325,7 +325,7 @@ footer {
 }
 
 .video-block {
-  padding: 15px;  /* Adds padding inside the video box */
+  padding: 15px;  /* Padding inside the video box */
   border-radius: 10px;  /* Rounded corners */
   transition: all 0.3s ease-in-out;  /* Smooth transition for hover effect */
 }
